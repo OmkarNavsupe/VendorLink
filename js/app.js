@@ -9,7 +9,7 @@
   // --- STATE MANAGEMENT ---
   const state = {
     theme: localStorage.getItem('vl_theme') || 'dark',
-    currentLocality: localStorage.getItem('vl_locality') || 'Kothrud, Pune',
+    currentLocality: localStorage.getItem('vl_locality') || 'Wagholi, Pune',
     currentView: 'grid', // 'grid', 'map', 'board', 'favorites'
     selectedCategory: 'all',
     searchQuery: '',
@@ -28,6 +28,8 @@
     loadInitialData();
     applyTheme(state.theme);
     setupEventListeners();
+    const locSelect = document.getElementById('localitySelect');
+    if (locSelect) locSelect.value = state.currentLocality;
     renderCategories();
     updateUI();
   }

@@ -16,11 +16,14 @@ const INITIAL_CATEGORIES = [
 ];
 
 const LOCALITY_COORDINATES = {
+  'Wagholi, Pune': { lat: 18.5793, lng: 73.9814, zoom: 15 },
   'Kothrud, Pune': { lat: 18.5074, lng: 73.8077, zoom: 15 },
   'Viman Nagar, Pune': { lat: 18.5679, lng: 73.9143, zoom: 15 },
+  'Kharadi, Pune': { lat: 18.5514, lng: 73.9348, zoom: 15 },
   'FC Road, Pune': { lat: 18.5204, lng: 73.8412, zoom: 15 },
   'Aundh, Pune': { lat: 18.5590, lng: 73.8075, zoom: 15 },
   'Baner, Pune': { lat: 18.5597, lng: 73.7799, zoom: 15 },
+  'Hadapsar, Pune': { lat: 18.5089, lng: 73.9259, zoom: 15 },
   'Wakad, Pune': { lat: 18.5987, lng: 73.7686, zoom: 15 },
   'Hinjewadi, Pune': { lat: 18.5912, lng: 73.7389, zoom: 15 },
   'Camp, Pune': { lat: 18.5167, lng: 73.8895, zoom: 15 },
@@ -38,6 +41,217 @@ const LOCALITY_COORDINATES = {
 };
 
 const INITIAL_VENDORS = [
+  {
+    id: 'v-501',
+    name: 'Kanifnath Super Market & Kirana Store',
+    category: 'Grocery',
+    owner: 'Santosh Jadhav',
+    phone: '+91 98220 78431',
+    whatsapp: '+91 98220 78431',
+    locality: 'Wagholi, Pune',
+    address: 'Shop #3, Wagholi Chowk, Pune-Nagar Highway, Wagholi',
+    distance: 0.2,
+    isOpen: true,
+    isVerified: true,
+    rating: 4.9,
+    reviewsCount: 78,
+    timings: '7:30 AM - 10:00 PM',
+    payments: ['UPI', 'Cash'],
+    languages: ['Marathi', 'Hindi', 'English'],
+    image: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=800&q=80',
+    description: 'Surveyed community kirana store in Wagholi. Fresh flours, Kolam & Indrayani rice, wood-pressed cooking oils, dairy milk & monthly student grocery kits with free doorstep delivery.',
+    offerings: [
+      { name: 'Fresh Chakki Whole Wheat Atta (10kg)', price: '₹420' },
+      { name: 'Organic Cold-Pressed Groundnut Oil (1L)', price: '₹210' },
+      { name: 'Indrayani Fragrant Rice (1kg)', price: '₹65' },
+      { name: 'Student Essential Grocery Pack', price: '₹450' }
+    ],
+    reviews: [
+      { author: 'Pranav Shinde (JSPM Student)', rating: 5, date: 'Yesterday', text: 'Best kirana shop in Wagholi! Free delivery to hostel rooms within 15 minutes.' },
+      { author: 'Megha Kulkarni', rating: 5, date: '3 days ago', text: 'Fresh chakki flour and cold-pressed oil quality is very authentic.' }
+    ],
+    mapCoords: { x: 45, y: 50, lat: 18.5795, lng: 73.9818 }
+  },
+  {
+    id: 'v-502',
+    name: 'Omkar Auto & Bike Mechanic Garage',
+    category: 'Mechanic',
+    owner: 'Omkar Shinde & Mauli Mechanic',
+    phone: '+91 98501 23490',
+    whatsapp: '+91 98501 23490',
+    locality: 'Wagholi, Pune',
+    address: 'Opposite JSPM College Main Gate, Nagar Road, Wagholi',
+    distance: 0.3,
+    isOpen: true,
+    isVerified: true,
+    rating: 4.9,
+    reviewsCount: 92,
+    timings: '8:00 AM - 9:30 PM',
+    payments: ['UPI', 'Cash'],
+    languages: ['Marathi', 'Hindi'],
+    image: 'https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80',
+    description: 'Experienced multi-brand bike & scooter garage surveyed in Wagholi. Engine oil change, clutch overhaul, tubeless puncture repair and prompt roadside breakdown assistance near colleges and housing societies.',
+    offerings: [
+      { name: 'General Bike Servicing & Engine Oil', price: '₹320' },
+      { name: 'Tubeless Puncture & Air Check', price: '₹50' },
+      { name: 'Roadside Breakdown Aid (Wagholi Area)', price: '₹150' },
+      { name: 'Carburetor Tuning & Mileage Boost', price: '₹140' }
+    ],
+    reviews: [
+      { author: 'Saurabh More', rating: 5, date: '2 days ago', text: 'Bike stopped on Nagar Road near Lexicon. Omkar came in 10 mins and fixed the issue!' }
+    ],
+    mapCoords: { x: 55, y: 40, lat: 18.5810, lng: 73.9835 }
+  },
+  {
+    id: 'v-503',
+    name: 'Shree Samarth 24/7 Medical & Chemist',
+    category: 'Medical',
+    owner: 'Dr. Pravin Kulkarni',
+    phone: '+91 98904 55672',
+    whatsapp: '+91 98904 55672',
+    locality: 'Wagholi, Pune',
+    address: 'Shop #4, Bakori Road, Near Wagheshwar Temple, Wagholi',
+    distance: 0.4,
+    isOpen: true,
+    isVerified: true,
+    rating: 4.9,
+    reviewsCount: 85,
+    timings: '24 Hours Open (Day & Night)',
+    payments: ['UPI', 'Cash', 'Credit Card'],
+    languages: ['Marathi', 'Hindi', 'English'],
+    image: 'https://images.unsplash.com/photo-1586015555751-63c25aa26388?auto=format&fit=crop&w=800&q=80',
+    description: 'Trusted 24-hour medical chemist in Wagholi. Genuine prescription medicines, first aid kits, pediatric care, Ayurvedic tonics, and guaranteed 15-minute emergency medicine delivery across Wagholi.',
+    offerings: [
+      { name: 'Emergency Doorstep Delivery (Wagholi)', price: 'Free' },
+      { name: 'Prescription Medicines', price: '15% Off' },
+      { name: 'First Aid Kit & Bandages', price: 'From ₹80' },
+      { name: 'Free Blood Pressure & Sugar Check', price: '₹0' }
+    ],
+    reviews: [
+      { author: 'Anita Gholap', rating: 5, date: 'Yesterday', text: 'Delivered pediatric cough syrup at 1:30 AM in Bakori Road. True lifesaver.' }
+    ],
+    mapCoords: { x: 38, y: 60, lat: 18.5780, lng: 73.9790 }
+  },
+  {
+    id: 'v-504',
+    name: 'Mauli Handloom & Saree Matching Center',
+    category: 'Textiles',
+    owner: 'Bhausaheb Gholap',
+    phone: '+91 97632 11980',
+    whatsapp: '+91 97632 11980',
+    locality: 'Wagholi, Pune',
+    address: 'Kesnand Road, Near Grampanchayat, Wagholi',
+    distance: 0.5,
+    isOpen: true,
+    isVerified: true,
+    rating: 4.8,
+    reviewsCount: 54,
+    timings: '10:00 AM - 9:00 PM',
+    payments: ['UPI', 'Cash'],
+    languages: ['Marathi', 'Hindi'],
+    image: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80',
+    description: 'Wagholi local textile matching center surveyed for traditional fabric needs. Huge stock of pure cotton dress materials, aster linings for blouses, curtain cloths, and borders.',
+    offerings: [
+      { name: 'Pure Cotton Dress Materials', price: '₹250/m' },
+      { name: 'Blouse Matching Aster Linings', price: '₹35/m' },
+      { name: 'Custom Curtain Fabrics', price: '₹380/m' },
+      { name: 'Saree Fall & Piko Threads', price: '₹25' }
+    ],
+    reviews: [
+      { author: 'Savita Jadhav', rating: 5, date: '4 days ago', text: 'Perfect color matching for blouse lining and very cooperative staff.' }
+    ],
+    mapCoords: { x: 62, y: 48, lat: 18.5765, lng: 73.9850 }
+  },
+  {
+    id: 'v-505',
+    name: 'Sai Collections & Master Tailors',
+    category: 'Clothing',
+    owner: 'Kavita & Tukaram Gade',
+    phone: '+91 98228 33411',
+    whatsapp: '+91 98228 33411',
+    locality: 'Wagholi, Pune',
+    address: 'BAIF Road, Near Lexicon International School, Wagholi',
+    distance: 0.4,
+    isOpen: true,
+    isVerified: true,
+    rating: 4.8,
+    reviewsCount: 61,
+    timings: '9:30 AM - 9:00 PM',
+    payments: ['UPI', 'Cash'],
+    languages: ['Marathi', 'Hindi', 'English'],
+    image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=80',
+    description: 'Surveyed boutique and alteration workshop on BAIF Road, Wagholi. Designer blouse stitching, readymade pure cotton kurtas, college dress stitching, and 10-minute jeans alteration.',
+    offerings: [
+      { name: 'Designer Blouse Custom Stitching', price: '₹280' },
+      { name: 'Instant Jeans & Pant Alteration', price: '₹40' },
+      { name: 'Pure Cotton Readymade Kurta', price: '₹499' },
+      { name: 'College Uniform & Suit Stitching', price: '₹450' }
+    ],
+    reviews: [
+      { author: 'Tanvi Bhosale', rating: 5, date: '5 days ago', text: 'Stitched my festival blouse in 2 days with flawless fitting!' }
+    ],
+    mapCoords: { x: 48, y: 35, lat: 18.5830, lng: 73.9805 }
+  },
+  {
+    id: 'v-506',
+    name: 'Shivraj Gavran Misal & Student Tiffin Mess',
+    category: 'Home Food',
+    owner: 'Dnyaneshwar (Mauli) Patil',
+    phone: '+91 99221 66789',
+    whatsapp: '+91 99221 66789',
+    locality: 'Wagholi, Pune',
+    address: 'Near JSPM BSIOTR Campus, Nagar Road, Wagholi',
+    distance: 0.2,
+    isOpen: true,
+    isVerified: true,
+    rating: 4.9,
+    reviewsCount: 110,
+    timings: '7:00 AM - 10:30 PM',
+    payments: ['UPI', 'Cash'],
+    languages: ['Marathi', 'Hindi'],
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+    description: 'Iconic Wagholi student hotspot surveyed near JSPM campus. Famous spicy Gavran Sprout Misal Pav, morning Kanda Poha, and homely monthly student dabba meal service.',
+    offerings: [
+      { name: 'Special Gavran Misal Pav Combo', price: '₹70' },
+      { name: 'Monthly 2-Time Student Tiffin Mess', price: '₹2800/mo' },
+      { name: 'Hot Chapati & Seasonal Bhaji Box', price: '₹80' },
+      { name: 'Kanda Poha & Masala Chai', price: '₹35' }
+    ],
+    reviews: [
+      { author: 'Aditya Deshmukh', rating: 5, date: 'Today', text: 'Best Misal in Wagholi and super wholesome monthly tiffins for college boys.' }
+    ],
+    mapCoords: { x: 52, y: 55, lat: 18.5802, lng: 73.9825 }
+  },
+  {
+    id: 'v-507',
+    name: 'Wagholi Electrician, Plumbing & Key Clinic',
+    category: 'Services',
+    owner: 'Ramdas Gaikwad',
+    phone: '+91 98600 44192',
+    whatsapp: '+91 98600 44192',
+    locality: 'Wagholi, Pune',
+    address: 'Shop #2, Near Wagheshwar Temple Chowk, Wagholi',
+    distance: 0.3,
+    isOpen: true,
+    isVerified: true,
+    rating: 4.8,
+    reviewsCount: 47,
+    timings: '8:00 AM - 8:30 PM',
+    payments: ['UPI', 'Cash'],
+    languages: ['Marathi', 'Hindi'],
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    description: 'Surveyed community handyman service in Wagholi. Doorstep electrical repairs, geyser installation, plumbing pipeline leakage fixes, and instant duplicate key making.',
+    offerings: [
+      { name: 'Doorstep Electrician Emergency Visit', price: '₹150' },
+      { name: 'Plumbing Tap & Leakage Repair', price: '₹150' },
+      { name: 'Instant Duplicate Key Cutting', price: '₹50' },
+      { name: 'Ceiling Fan & Switch Fitting', price: '₹120' }
+    ],
+    reviews: [
+      { author: 'Kiran Pawar', rating: 5, date: '1 week ago', text: 'Came in 20 minutes to fix our society water pump leakage. Honest charges.' }
+    ],
+    mapCoords: { x: 42, y: 44, lat: 18.5778, lng: 73.9800 }
+  },
   {
     id: 'v-401',
     name: 'Sanjeevani 24/7 Medical & Chemist',
@@ -883,6 +1097,26 @@ const INITIAL_BOARD_POSTS = [
     time: '1 hour ago',
     phone: '+91 98220 11223',
     likes: 31
+  },
+  {
+    id: 'b-501',
+    vendorName: 'Shivraj Gavran Misal & Student Tiffin (Wagholi)',
+    tag: 'Special Menu',
+    title: '🍲 Wagholi Student Tiffin Pre-booking Open for New Semester!',
+    content: 'Special monthly mess admissions open for college students near JSPM & Raisoni campus Wagholi. 2 times fresh hot meals with unlimited chapatis. ₹2800/month. Free delivery to nearby hostels.',
+    time: '20 mins ago',
+    phone: '+91 99221 66789',
+    likes: 42
+  },
+  {
+    id: 'b-502',
+    vendorName: 'Shree Samarth 24/7 Medical (Bakori Rd, Wagholi)',
+    tag: 'Notice',
+    title: '📢 24/7 Free Home Medicine Delivery started across Wagholi',
+    content: 'Residents of Bakori Road, BAIF Road, and Nagar Road Wagholi can now WhatsApp prescription for guaranteed 15-minute home delivery. Senior citizens get 15% discount on all medicines.',
+    time: '1 hour ago',
+    phone: '+91 98904 55672',
+    likes: 35
   },
   {
     id: 'b-302',
